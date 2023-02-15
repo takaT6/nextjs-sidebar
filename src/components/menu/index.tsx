@@ -24,10 +24,12 @@ const Menu = () => {
     <>
       <div>
         {navigations.map((navigation) => (
-          <Link href={navigation.path} key={navigation.path}>
-            {navigation.icon}
-            {navigation.pageName}
-          </Link>
+          <div>
+            <Link href={navigation.path} key={navigation.path}>
+              {navigation.icon}
+              {navigation.pageName}
+            </Link>
+          </div>
         ))}
       </div>
     </>
