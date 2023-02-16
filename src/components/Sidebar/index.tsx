@@ -44,11 +44,9 @@ const Siderbar = () => {
         <ul className={classes.ul}>
           {navigations.map((navigation) => (
             <li key={navigation.href}>
-              <Link href={navigation.href}>
-                <div className={classes.menu}>
-                  {navigation.icon}
-                  {navigation.label}
-                </div>
+              <Link href={navigation.href} className={classes.menu}>
+                {navigation.icon}
+                {navigation.label}
               </Link>
             </li>
           ))}
