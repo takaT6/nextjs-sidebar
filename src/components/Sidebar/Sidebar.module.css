@@ -1,0 +1,16 @@
+.sidebar {
+    width: 50vw;
+    z-index: 50;
+    position: fixed;
+    background-color: lightblue;
+}
+
+.hamburger {}
+
+.menu {
+    display: flex;
+}
+
+.ul {
+    list-style: none;
+}

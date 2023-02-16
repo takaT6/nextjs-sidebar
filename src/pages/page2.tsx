@@ -1,7 +1,7 @@
-import SiderMenu from '@/components/SiderMenu'
 import Head from 'next/head'
 
 const Home = () => {
+	const array = new Array(100).fill(10)
 	return (
 		<>
 			<Head>
@@ -10,7 +10,9 @@ const Home = () => {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			page2
+			{array.map(() => (
+				<div>This is page2</div>
+			))}
 		</>
 	)
 }
