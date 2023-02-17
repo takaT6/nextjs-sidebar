@@ -1,24 +1,20 @@
+import { AppContext } from "@/pages/_app";
 import Link from "next/link";
-import { useState } from "react";
-import classes from "src/components/Header/Header.module.css"
-import Siderbar from "../Sidebar"
+import { useContext, useState } from "react";
+import Sidebar from "../Sidebar"
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const { isOpen, setIsOpen } = useContext(AppContext);
 
   const handleClick = () => {
     setIsOpen(isOpen => !isOpen);
   };
   return (
-    <>
-      <header className={classes.header}>
-
-        <div className={classes.hamburger} onClick={handleClick}>🍔</div>
-        <Link href="/">This is header.</Link>
-      </header>
-
-      {isOpen && <Siderbar />}
-    </>
+    <header className="sticky top-0 text-right w-full bg-red-100">
+      {/* <div className="float-left absolute inset-y-0 z-10" onClick={handleClick}>🍔</div> */}
+      <Sidebar />
+      <Link href="/">This is header.</Link>
+    </header>
   )
 }
 
