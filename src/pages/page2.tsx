@@ -1,7 +1,7 @@
-import Head from 'next/head'
+import Head from 'next/head';
 
 const Home = () => {
-  const array = new Array(100).fill(10)
+  const array = new Array(100).fill(10);
   return (
     <>
       <Head>
@@ -10,11 +10,11 @@ const Home = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {array.map(() => (
-        <div>This is page2</div>
+      {array.map((_, i) => (
+        <div key={i}>This is page2</div>
       ))}
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
